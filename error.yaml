@@ -1,0 +1,20 @@
+  Error:
+    type: object
+    properties:
+      timestamp:
+        type: integer
+        format: int64
+      status:
+        type: integer
+        format: int32
+      error:
+        type: string
+      message:
+        type: string
+      path:
+        type: string
+    required:
+      - timestamp
+      - status
+      - error
+      - message

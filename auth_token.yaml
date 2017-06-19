@@ -1,0 +1,11 @@
+  AuthToken:
+    type: object
+    properties:
+      token:
+        type: string
+        description: The bearer token to be used for authenticating all API endpoints
+      expiryDate:
+        type: string
+        description: >-
+          An ISO 8601 date format containing the UTC timestamp when the token is
+          expired, e.g. 2016-07-27T23:41:50Z.
