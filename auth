@@ -1,0 +1,26 @@
+post:
+  summary: Get a new bearer authentication token.
+  description: >
+    You need to authenticate your call in each API endpoint. The
+    authentication is done using
+
+    an authorization token you need to send in the headers of your HTTP call
+    (i.e. "Authorization: Bearer {token}").
+
+    When you sign up for using this API you receive a username and a
+    password. You need to use this endpoint with the
+
+    username:password combination to retrieve a new bearer token.
+  tags:
+    - Authentication
+  security:
+    - Basic Authentication: []
+  responses:
+    '200':
+      description: The authorization token to use
+      schema:
+        $ref: '#/definitions/AuthToken'
+    default:
+      description: Unexpected error
+      schema:
+        $ref: '#/definitions/Error'
